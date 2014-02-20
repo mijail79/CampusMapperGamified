@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageSourceActivity" >
+
+    <LinearLayout
+        android:id="@+id/selectUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <TextView
+            android:id="@+id/editText_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_welcome" />
+
+        <EditText
+            android:id="@+id/textview_username"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.11"
+            android:ems="10" 
+            android:hint="@string/text_username">
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goStart"
+            android:text="@string/title_button_go" />
+    </LinearLayout>
+
+</RelativeLayout>

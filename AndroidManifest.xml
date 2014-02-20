@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.ifgi.sitcom.campusmappergamified"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> 
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_home"
+        android:theme="@style/AppTheme" 
+        android:name="de.ifgi.sitcom.campusmappergamified.activities.MyCampusMapperGame" >
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.StartActivity"
+            android:label="@string/app_name" android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.ChooseLocationActivity"
+            android:label="@string/title_activity_building_information" >
+        </activity>
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.ImageSourceActivity"
+            android:label="@string/title_activity_image_source" >
+        </activity>
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.CroppingActivity"
+            android:label="@string/title_activity_transformation" >
+        </activity>
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.MappingActivity"
+            android:label="@string/title_activity_mapping" >
+        </activity>
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.IndoorConnectionActivity"
+            android:label="@string/title_activity_stairs_location" >
+        </activity>
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.OutdoorConnectionActivity"
+            android:label="@string/title_activity_entrance_location" >
+        </activity>
+        <!-- Activities for gamification -->
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.LeaderboardActivity"
+            android:label="@string/leaderboard" >
+        </activity>   
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.OwnershipMapActivity"
+            android:label="@string/title_activity_ownership" >
+        </activity>        
+        <!-- this activity has to appear only once when the user launches for the first time the app
+        	then later the app will call StartActivity from the second time -->
+        <activity
+            android:name="de.ifgi.sitcom.campusmappergamified.activities.RegistrationActivity"
+            android:label="@string/app_name" android:noHistory="true" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>         
+    </application>
+
+</manifest>
